@@ -1,0 +1,110 @@
+# TJU Thesis Review Kit
+
+面向天津大学本科毕业设计（论文）的开源辅助套件，包含：
+
+- Cursor `Skill` 与 `Rule`
+- 可直接起步的 `LaTeX` starter 模板
+- `PROJECT.md` / `MEMORY.md` 模板
+- 可直接复制使用的提问模板、送审前总检 prompt、导师汇报版输出模板
+
+它的目标不是替代导师和学院要求，而是帮助同学们更系统地完成论文自查、格式整改和送审前 review。
+
+## 适合谁用
+
+- 正在写天津大学本科毕业设计（论文）的同学
+- 想用 Cursor / AI 辅助做格式审查、图表核对、摘要润色、参考文献核对的人
+- 想把论文仓库整理成“可持续 review”结构的人
+
+## 能解决什么问题
+
+- 按天津大学本科毕业设计（论文）规范做全文 review
+- 检查前置页、页码、页眉页脚、标题层级、摘要和关键词
+- 检查图、表、公式、附录编号、题注位置和三线表
+- 检查参考文献与文内引用的一致性
+- 清理不适合送审的表达，比如内部文件名、本地路径、答辩备忘口吻
+
+## 仓库结构
+
+```text
+tju-thesis-review-kit/
+├── .cursor/
+│   ├── rules/
+│   └── skills/
+├── latex-template/
+├── prompts/
+├── templates/
+├── README.md
+├── LICENSE
+├── THIRD_PARTY.md
+├── CONTRIBUTING.md
+├── GITHUB_COPY.md
+├── GITHUB_RELEASE_DRAFT.md
+└── OPEN_SOURCE_CHECKLIST.md
+```
+
+## 快速开始
+
+### 1. 复制 AI review 能力
+
+把本仓库中的 `.cursor/skills/` 和 `.cursor/rules/` 复制到你的论文仓库。
+
+### 2. 建立项目事实文件
+
+把 `templates/PROJECT.md` 复制到你的论文仓库根目录，并填写论文题目、LaTeX 根目录、主数据源、文献边界和特殊约束。
+
+如果你希望 AI 记住导师偏好、当前问题和本轮整改重点，再把 `templates/MEMORY.md` 复制到仓库根目录。
+
+### 3. 使用 LaTeX starter 模板
+
+如果你还没有论文骨架，可以直接从 `latex-template/` 开始。模板已做去私有化处理，不依赖你本机额外字体和封面图片。
+
+### 4. 直接开始问
+
+推荐先从这些问法开始：
+
+- “请按天津大学本科毕业论文规范 review 我的 LaTeX 仓库。”
+- “请重点检查图表、摘要和参考文献是否符合送审要求。”
+- “请做送审前最后一轮总检，输出问题清单和剩余风险。”
+
+更多可直接复制的问法见 `prompts/recommended-prompts.md`。
+
+## 开箱即用资源
+
+- `prompts/recommended-prompts.md`
+  - 常用提问模板，适合日常 review、图表整改、参考文献核对、摘要检查
+- `prompts/pre-submission-review-prompt.md`
+  - 送审前总检 prompt，可直接复制到 Cursor
+- `prompts/advisor-report-template.md`
+  - 导师汇报版输出模板，适合整理“已改什么、还差什么、风险在哪”
+- `latex-template/README.md`
+  - LaTeX starter 模板说明
+
+## 清洗说明
+
+- 删除了个人课题名称、个人文件路径、私有仓库链接和本机环境命名
+- 去掉了只适用于单一课题的章节号、数据集、实验材料和项目细节
+- 把动态经验拆成通用 `Skill`、常驻 `Rule` 和仓库级模板
+- 对 LaTeX 模板做了去私有化处理，使其更适合公开分发
+
+更详细的映射说明见 `CLEANUP_NOTES.md`。
+
+## 发布到 GitHub 前
+
+建议至少确认：
+
+- `OPEN_SOURCE_CHECKLIST.md`
+- `THIRD_PARTY.md`
+- `GITHUB_COPY.md`
+- `GITHUB_RELEASE_DRAFT.md`
+
+这样你不仅能发代码，也能直接发简介、release 文案和使用说明。
+
+## 注意
+
+- 本仓库不能替代学院最终审查、导师意见、查重系统和 AIGC 检测系统
+- 天津大学不同学院、不同年份可能存在细节差异，使用前请以最新正式要求为准
+- 若你在此基础上扩展专业专属写法，建议单独增加学科规则，而不是把通用规则写死
+
+## License
+
+本仓库默认使用 `MIT` 许可证发布你在本仓库中的整理与新增内容。对于从既有模板衍生或整理而来的部分，请同时阅读 `THIRD_PARTY.md`。

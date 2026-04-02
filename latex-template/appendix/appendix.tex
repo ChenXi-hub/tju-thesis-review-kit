@@ -1,0 +1,27 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter*{附\hspace{1em}录}
+\addcontentsline{toc}{chapter}{附\hspace{1em}录}
+
+\newcommand{\setappendixnumbering}[1]{
+  \setcounter{figure}{0}
+  \setcounter{table}{0}
+  \setcounter{equation}{0}
+  \renewcommand{\thefigure}{#1\ifnum\value{figure}<10 0\fi\arabic{figure}}
+  \renewcommand{\thetable}{#1-\arabic{table}}
+  \renewcommand{\theequation}{#1-\arabic{equation}}
+}
+
+\phantomsection
+\section*{附录A~~补充材料说明}
+\addcontentsline{toc}{section}{附录A~~补充材料说明}
+\setappendixnumbering{A}
+
+这里填写正文未展开但有必要保留的补充信息，例如实验环境、问卷条目、指标定义、样本筛选规则、访谈提纲、关键代码接口说明等。附录应服务于正文论证，而不是简单堆放原始材料目录。
+
+\phantomsection
+\section*{附录B~~扩展表格或补充示意}
+\addcontentsline{toc}{section}{附录B~~扩展表格或补充示意}
+\setappendixnumbering{B}
+
+这里填写扩展表格、补充流程图、变量说明或其他适合放在附录中的内容。若附录中包含图、表、公式，请确认编号与正文分离。

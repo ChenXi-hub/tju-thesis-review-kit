@@ -1,0 +1,156 @@
+% !Mode:: "TeX:UTF-8"
+% 开源 starter 模板，保留天津大学本科毕业论文常用排版设置。
+
+%%%%%%%%%% Package %%%%%%%%%%%%
+% 使用 ctexbook + LuaLaTeX/XeLaTeX 时不应再加载 CJK 宏包（会干扰字体设置）
+\def\atemp{xelatex}\def\btemp{lualatex}
+\ifx\atemp\usewhat\else\ifx\btemp\usewhat\else
+  \usepackage{CJK}
+\fi\fi
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}                       % 支持插图处理
+\usepackage[a4paper,top= 27.5true mm,bottom=25.4 true mm,left=35.7 true mm,right=27.7 true mm, headheight=15true mm,footskip=8true mm]{geometry}
+                                            % 支持版面尺寸设置
+% \usepackage[squaren]{SIunits}             % 旧宏包，Overleaf 上易与现有命令冲突
+\usepackage{titlesec}                       % 控制标题的宏包
+\usepackage{titletoc}                       % 控制目录的宏包
+\usepackage{fancyhdr}                       % fancyhdr宏包 支持页眉和页脚的相关定义
+\def\atemp{xelatex}\def\btemp{lualatex}
+\ifx\atemp\usewhat\else\ifx\btemp\usewhat\else
+  \def\atemp{xelatex}\def\btemp{lualatex}
+\ifx\atemp\usewhat\else\ifx\btemp\usewhat\else
+  \usepackage{CJKpunct}                       % 精细调整中文的标点符号
+\fi\fi
+\fi\fi
+\usepackage{color}                          % 支持彩色
+\usepackage{amsmath}                        % AMSLaTeX宏包 用来排出更加漂亮的公式
+\usepackage{amssymb}                        % 数学符号生成命令
+\usepackage[below]{placeins}    %允许上一个section的浮动图形出现在下一个section的开始部分,还提供\FloatBarrier命令,使所有未处理的浮动图形立即被处理
+\usepackage{multirow}                       % 使用Multirow宏包，使得表格可以合并多个row格
+\usepackage{booktabs}                       % 表格，横的粗线；\specialrule{1pt}{0pt}{0pt}
+\usepackage{makecell}                       % 支持单元格合并
+\usepackage{longtable}                      % 支持跨页的表格。
+\usepackage{tabularx}                       % 自动设置表格的列宽
+% \usepackage{ccaption}                       % 支持子图的中文标题
+% \usepackage{subfig}                         
+\usepackage{booktabs}                       % 支持行内多表格
+\usepackage{subcaption}                     % 支持子表
+\captionsetup[subtable]{labelformat=empty}  % 子表不标序号
+\usepackage[numbers]{natbib}  % 不压缩区间，避免出现 [1-6] 这类过宽泛引用
+\usepackage{float}                         % 支持 [H] 固定浮动体位置
+\usepackage{enumitem}                       % 使用enumitem宏包,改变列表项的格式
+\usepackage{calc}                           % 长度可以用+ - * / 进行计算
+\usepackage{txfonts}                        % 字体宏包
+\usepackage{bm}                             % 处理数学公式中的黑斜体的宏包
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}  % 定理类环境宏包，其中 amsmath 选项用来兼容 AMS LaTeX 的宏包
+\def\atemp{xelatex}\def\btemp{lualatex}
+\ifx\atemp\usewhat\else\ifx\btemp\usewhat\else
+  \def\atemp{xelatex}\def\btemp{lualatex}
+\ifx\atemp\usewhat\else\ifx\btemp\usewhat\else
+  \usepackage{CJKnumb}                        % 提供将阿拉伯数字转换成中文数字的命令
+\fi\fi
+\fi\fi
+\usepackage{indentfirst}                    % 首行缩进宏包
+\def\atemp{xelatex}\def\btemp{lualatex}
+\ifx\atemp\usewhat\else\ifx\btemp\usewhat\else
+  \def\atemp{xelatex}\def\btemp{lualatex}
+\ifx\atemp\usewhat\else\ifx\btemp\usewhat\else
+  \usepackage{CJKutf8}                        % 用在UTF8编码环境下，它可以自动调用CJK，同时针对UTF8编码作了设置
+\fi\fi
+\fi\fi
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\usepackage{xcolor}
+\usepackage{tikz}
+% 支持表格中叉与对勾
+\usepackage{pifont}
+\DeclareRobustCommand{\cmark}{\textcolor{green!60!black}{\ding{51}}} % ✓
+\DeclareRobustCommand{\xmark}{\textcolor{red}{\ding{55}}} % ✗
+\usepackage[table]{xcolor} % 提供 \columncolor
+\usepackage{threeparttable}
+\usepackage{adjustbox}
+\usepackage{xstring}
+\usepackage{pgf}          % \pgfmath... 计算
+\definecolor{NatureBlue}{RGB}{34,94,168}
+\definecolor{BTUp}{RGB}{200,60,60}     % 增加：红
+\definecolor{BTDown}{RGB}{60,110,190}  % 减少：蓝
+\makeatletter
+\def\bt@dmax{1} % 默认值，防止未设置时报错
+\newcommand{\btsetdmax}[1]{\def\bt@dmax{#1}}
+\newcommand{\btcell}[2]{%
+  \begingroup
+  \def\bt@val{#1}%
+  \def\bt@delta{#2}%
+  \expandafter\btcell@parse\bt@delta\relax
+  \endgroup
+}
+\def\btcell@parse(#1#2)\relax{%
+  \pgfmathsetmacro{\bt@abs}{abs(#2)}%
+  \pgfmathsetmacro{\bt@ratio}{min(1, \bt@abs/(\bt@dmax))}%
+  \pgfmathtruncatemacro{\bt@int}{round(6 + 26*\bt@ratio)}%
+  \def\bt@base{NatureBlue}%
+  \ifx#1+%
+    \def\bt@base{BTUp}%
+  \else\ifx#1-%
+    \def\bt@base{BTDown}%
+  \fi\fi
+  \edef\bt@colorspec{\bt@base!\bt@int}%
+  \expandafter\cellcolor\expandafter{\bt@colorspec}%
+  \bt@val{\scriptsize\textcolor{gray}{\,\bt@delta}}%
+}
+\makeatother
+%支持代码环境
+\usepackage{listings}
+\lstset{numbers=left,
+language=[ANSI]{C},
+numberstyle=\tiny,
+extendedchars=false,
+showstringspaces=false,
+breakatwhitespace=false,
+breaklines=true,
+captionpos=b,
+keywordstyle=\color{blue!70},
+commentstyle=\color{red!50!green!50!blue!50},
+frame=shadowbox,
+rulesepcolor=\color{red!20!green!20!blue!20}
+}
+%支持算法环境
+\usepackage[boxed,ruled,lined,linesnumbered]{algorithm2e}
+\renewcommand{\algorithmcfname}{算法}
+\SetAlFnt{\it}
+% 算法按章编号，与图、表分章编号习惯一致
+\makeatletter
+\@addtoreset{algocf}{chapter}
+\makeatother
+\renewcommand{\thealgocf}{\thechapter-\arabic{algocf}}
+\SetKwInput{KwIn}{输入}
+\SetKwInput{KwOut}{输出}
+\SetKw{KwTo}{至}
+\SetKw{KwRet}{返回}
+\SetKw{KwCont}{continue}
+
+\usepackage{array}
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+% XeLaTeX / LuaLaTeX 下这两段配置一致，直接统一加载即可
+\usepackage{pdfpages}
+\usepackage[unicode,
+            pdfstartview=FitH,
+            bookmarksnumbered=true,
+            bookmarksopen=true,
+            plainpages=false,
+            pdfpagelabels=true,
+            colorlinks=false,
+            pdfborder={0 0 0},
+            citecolor=blue,
+            linkcolor=red,
+            anchorcolor=green,
+            urlcolor=blue,
+            breaklinks=true
+            ]{hyperref}
+\pdfstringdefDisableCommands{%
+  \def\\{ }%
+}

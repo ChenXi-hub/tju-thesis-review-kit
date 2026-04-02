@@ -1,0 +1,71 @@
+% !Mode:: "TeX:UTF-8"
+% !TEX program = lualatex
+
+\def\usewhat{lualatex}
+\documentclass[12pt,openany,oneside,fontset=fandol]{ctexbook}
+\usepackage{anyfontsize}
+
+% 为开源模板保留最少外部依赖，默认使用 ctexbook 提供的中文字体方案。
+\newif\ifFontDebug
+\FontDebugfalse
+
+\input{setup/package}
+\graphicspath{{figures/}}
+
+\begin{document}
+\ifFontDebug
+  {\noindent\small
+  \begingroup\heiti
+    heiti font = \fontname\font\par
+    黑体测试 ABC 123\par
+  \endgroup
+  \begingroup\song
+    song font = \fontname\font\par
+    宋体对照 ABC 123\par
+  \endgroup
+  }
+  \clearpage
+\fi
+\input{setup/format}
+\frontmatter
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0 pt}
+	\fancyfoot[C]{\song\xiaowu~\thepage~}
+}
+
+%%%%%%%%%% 封面 %%%%%%%%%%
+\include{include/cover}
+
+%%%%%%%%%% 扉页与声明 %%%%%%%%%%
+\setcounter{page}{1}
+\pagenumbering{Roman}
+\include{include/frontmatter}
+
+%%%%%%%%%% 摘要 %%%%%%%%%%
+\include{include/abstract}
+
+%%%%%%%%%% 目录 %%%%%%%%%%
+\makecontents
+
+%%%%%%%%%% 正文 %%%%%%%%%%
+\setcounter{page}{1}
+\titleformat{\chapter}{\centering\xiaosan\hei\bfseries}{\chaptername}{1em}{}
+\include{include/body}
+
+%%%%%%%%%% 参考文献 %%%%%%%%%%
+\FloatBarrier
+\makereferences
+
+%%%%%%%%%% 附录 %%%%%%%%%%
+\titleformat{\chapter}{\centering\xiaosan\hei\bfseries}{\chaptername}{1em}{}
+\FloatBarrier
+\include{appendix/appendix}
+
+%%%%%%%%%% 致谢 %%%%%%%%%%
+\titleformat{\chapter}{\centering\xiaosan\hei\bfseries}{\chaptername}{1em}{}
+\FloatBarrier
+\include{appendix/acknowledgements}
+
+\clearpage
+\end{document}
