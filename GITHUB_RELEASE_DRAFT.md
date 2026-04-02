@@ -20,6 +20,12 @@
 - 常用提问模板、送审前总检 prompt、导师汇报版输出模板
 - 开源发布所需的 README、License、Third-party 说明和自查清单
 
+### 当前形态
+
+- 已同时支持 `Cursor`、`Codex`、`Claude Code`
+- README 已补充不同工具接入方式说明
+- GitHub About、topics 和仓库内对外文案已统一到“三工具支持”口径
+
 ### 适合用途
 
 - 论文格式检查

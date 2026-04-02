@@ -95,6 +95,16 @@ tju-thesis-review-kit/
 - `Codex`：`AGENTS.md` + `.codex/skills/`
 - `Claude Code`：`CLAUDE.md` + `.claude/skills/`
 
+### 接入方式对照表
+
+| 工具 | 需要复制的文件 | 主要作用 | 适合谁 |
+|------|----------------|----------|--------|
+| `Cursor` | `.cursor/` | 提供规则、技能和 IDE 内常驻审稿能力 | 已经在 Cursor 里写论文的人 |
+| `Codex` | `AGENTS.md` + `.codex/` | 提供项目级指令入口和可复用 skill | 想在 Codex 中复用同一套 review 工作流的人 |
+| `Claude Code` | `CLAUDE.md` + `.claude/` | 提供项目级约束和 thesis review skill | 想在 Claude Code 中保持统一审稿流程的人 |
+
+如果你同时使用多种工具，可以把三套入口一起放进论文仓库，让不同代理共享同一套论文上下文结构，再配合 `PROJECT.md` / `MEMORY.md` 使用。
+
 ## 开箱即用资源
 
 - `prompts/recommended-prompts.md`
