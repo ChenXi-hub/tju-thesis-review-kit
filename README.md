@@ -1,8 +1,8 @@
 # TJU Thesis Review Kit
 
-为天津大学本科毕业设计（论文）准备的一套更实用的开源辅助工具：把零散的毕设经验整理成可复用的 Cursor `Skill`、`Rule`、Prompt 和 `LaTeX` starter，帮助同学们更高效地完成论文自查、格式整改和送审前 review。
+为天津大学本科毕业设计（论文）准备的一套更实用的开源辅助工具：把零散的毕设经验整理成可复用的 Cursor、Codex、Claude Code 规则与技能、Prompt 和 `LaTeX` starter，帮助同学们更高效地完成论文自查、格式整改和送审前 review。
 
-An open-source toolkit for Tianjin University undergraduate theses, including reusable Cursor skills, rules, prompts, and a LaTeX starter template for review, revision, and pre-submission checks.
+An open-source toolkit for Tianjin University undergraduate theses, including reusable Cursor, Codex, and Claude Code workflows, prompts, and a LaTeX starter template for review, revision, and pre-submission checks.
 
 适合“已经在写论文，但总觉得格式、图表、摘要、参考文献容易出问题”的场景，也适合想把 AI 从“零散问答”升级成“长期协作助手”的同学。
 
@@ -11,6 +11,8 @@ This repository is designed for students who want more than one-off AI answers a
 ## What Is Included
 
 - Cursor `Skill` 与 `Rule`
+- Codex 项目级 `AGENTS.md` 与 `.codex/skills/`
+- Claude Code 项目级 `CLAUDE.md` 与 `.claude/skills/`
 - 可直接起步的 `LaTeX` starter 模板
 - `PROJECT.md` / `MEMORY.md` 模板
 - 可直接复制使用的提问模板、送审前总检 prompt、导师汇报版输出模板
@@ -33,8 +35,14 @@ This repository is designed for students who want more than one-off AI answers a
 
 ```text
 tju-thesis-review-kit/
+├── AGENTS.md
+├── CLAUDE.md
 ├── .cursor/
 │   ├── rules/
+│   └── skills/
+├── .codex/
+│   └── skills/
+├── .claude/
 │   └── skills/
 ├── latex-template/
 ├── prompts/
@@ -53,7 +61,11 @@ tju-thesis-review-kit/
 
 ### 1. 复制 AI review 能力
 
-把本仓库中的 `.cursor/skills/` 和 `.cursor/rules/` 复制到你的论文仓库。
+按你使用的工具复制对应文件：
+
+- Cursor：复制 `.cursor/`
+- Codex：复制 `AGENTS.md` 和 `.codex/`
+- Claude Code：复制 `CLAUDE.md` 和 `.claude/`
 
 ### 2. 建立项目事实文件
 
@@ -74,6 +86,14 @@ tju-thesis-review-kit/
 - “请做送审前最后一轮总检，输出问题清单和剩余风险。”
 
 更多可直接复制的问法见 `prompts/recommended-prompts.md`。
+
+## Multi-Agent Support
+
+本仓库现在同时提供三套平行入口，方便不同 AI 编码工具复用同一套论文 review 思路：
+
+- `Cursor`：`.cursor/rules/` + `.cursor/skills/`
+- `Codex`：`AGENTS.md` + `.codex/skills/`
+- `Claude Code`：`CLAUDE.md` + `.claude/skills/`
 
 ## 开箱即用资源
 
