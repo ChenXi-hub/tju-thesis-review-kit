@@ -6,7 +6,7 @@
 
 最近把自己写天津大学本科毕设时积累的一套经验整理成了一个开源仓库，刚刚发到 GitHub 了。
 
-里面不是单纯一份论文模板，而是一整套更适合现在 AI 工作流的东西：Cursor 的 review 规则、可直接复制的 prompt、`PROJECT.md` / `MEMORY.md` 模板，还有一个清洗过的 `LaTeX` starter。
+里面不是单纯一份论文模板，而是一整套更适合现在 AI 工作流的东西：Cursor、Codex、Claude Code 三套入口下的 review 规则与技能、可直接复制的 prompt、`PROJECT.md` / `MEMORY.md` 模板，还有一个清洗过的 `LaTeX` starter。
 
 比较适合写论文时老担心这些问题的人：
 - 前置页、页码、页眉页脚是不是对
@@ -30,7 +30,7 @@ https://github.com/ChenXi-hub/tju-thesis-review-kit
 
 它不是只有论文模板，而是把“AI 怎么真的帮你 review 论文”这件事做成了一套可复用工具：
 
-- Cursor `Skill` / `Rule`
+- Cursor / Codex / Claude Code 三套并行入口
 - 送审前总检 prompt
 - 导师汇报版模板
 - `PROJECT.md` / `MEMORY.md`
@@ -54,7 +54,7 @@ https://github.com/ChenXi-hub/tju-thesis-review-kit
 `TJU Thesis Review Kit`
 
 里面有：
-- Cursor review 规则和 skill
+- Cursor / Codex / Claude Code 三套 review 入口
 - 可直接复制的 prompt
 - `PROJECT.md` / `MEMORY.md` 模板
 - 一个清洗过的 `LaTeX` starter
@@ -71,7 +71,7 @@ I open-sourced a toolkit for reviewing Tianjin University undergraduate theses:
 `TJU Thesis Review Kit`
 
 It includes:
-- Cursor skills and rules
+- Cursor, Codex, and Claude Code workflows
 - reusable prompts
 - PROJECT / MEMORY templates
 - a cleaned LaTeX starter template
@@ -85,7 +85,7 @@ https://github.com/ChenXi-hub/tju-thesis-review-kit
 
 Open-sourced `TJU Thesis Review Kit` today.
 
-This repo packages my thesis-writing workflow into reusable Cursor skills, rules, prompts, and a cleaned LaTeX starter template for Tianjin University undergraduate theses.
+This repo packages my thesis-writing workflow into reusable Cursor, Codex, and Claude Code workflows, prompts, and a cleaned LaTeX starter template for Tianjin University undergraduate theses.
 
 It is built for practical tasks like:
 - format review
@@ -100,7 +100,7 @@ https://github.com/ChenXi-hub/tju-thesis-review-kit
 
 把自己写天津大学本科毕设时积累的一套经验整理成开源仓库了：`TJU Thesis Review Kit`。
 
-包含 Cursor review 规则、可直接复制的 prompt、`PROJECT.md` / `MEMORY.md` 模板，以及一个清洗过的 `LaTeX` starter，适合做论文自查、格式整改和送审前总检。
+包含 Cursor / Codex / Claude Code 三套 review 入口、可直接复制的 prompt、`PROJECT.md` / `MEMORY.md` 模板，以及一个清洗过的 `LaTeX` starter，适合做论文自查、格式整改和送审前总检。
 
 仓库地址：
 https://github.com/ChenXi-hub/tju-thesis-review-kit

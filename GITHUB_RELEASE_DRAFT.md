@@ -8,12 +8,13 @@
 
 首次公开发布 `TJU Thesis Review Kit`。
 
-这是一套面向天津大学本科毕业设计（论文）的开源辅助工具包，整理了我在写毕设过程中积累的 Cursor 使用经验、论文 review 流程和 LaTeX 模板清洗结果，希望能帮助后来的同学更高效地做论文自查和送审前整改。
+这是一套面向天津大学本科毕业设计（论文）的开源辅助工具包，整理了我在写毕设过程中积累的 Cursor、Codex、Claude Code 使用经验、论文 review 流程和 LaTeX 模板清洗结果，希望能帮助后来的同学更高效地做论文自查和送审前整改。
 
 ### 本次包含
 
-- 天津大学本科毕设 review 用的 Cursor `Skill`
-- 两个常驻 `Rule`
+- 天津大学本科毕设 review 用的 Cursor `Skill` / `Rule`
+- Codex 项目级 `AGENTS.md` 与 `.codex/skills/`
+- Claude Code 项目级 `CLAUDE.md` 与 `.claude/skills/`
 - 一个可公开分发的 `LaTeX` starter 模板
 - `PROJECT.md` / `MEMORY.md` 模板
 - 常用提问模板、送审前总检 prompt、导师汇报版输出模板
