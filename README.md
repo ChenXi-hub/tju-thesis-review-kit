@@ -44,6 +44,14 @@ tju-thesis-review-kit/
 │   └── skills/
 ├── .claude/
 │   └── skills/
+├── docs/
+│   ├── requirements.md
+│   ├── cleanup-notes.md
+│   ├── open-source-checklist.md
+│   └── release/
+│       ├── github-copy.md
+│       ├── github-release-draft.md
+│       └── social-posts.md
 ├── latex-template/
 ├── prompts/
 ├── templates/
@@ -51,10 +59,6 @@ tju-thesis-review-kit/
 ├── LICENSE
 ├── THIRD_PARTY.md
 ├── CONTRIBUTING.md
-├── GITHUB_COPY.md
-├── GITHUB_RELEASE_DRAFT.md
-├── OPEN_SOURCE_CHECKLIST.md
-└── SOCIAL_POSTS.md
 ```
 
 ## 快速开始
@@ -77,7 +81,15 @@ tju-thesis-review-kit/
 
 如果你还没有论文骨架，可以直接从 `latex-template/` 开始。模板已做去私有化处理，不依赖你本机额外字体和封面图片。
 
-### 4. 直接开始问
+### 4. 检查 Requirements
+
+在真正接入前，建议先看 `docs/requirements.md`，里面写清了：
+
+- 不同工具对应需要哪些文件
+- 使用本仓库建议具备哪些工具或环境
+- `LaTeX` starter 的推荐编译方式
+
+### 5. 直接开始问
 
 推荐先从这些问法开始：
 
@@ -105,6 +117,16 @@ tju-thesis-review-kit/
 
 如果你同时使用多种工具，可以把三套入口一起放进论文仓库，让不同代理共享同一套论文上下文结构，再配合 `PROJECT.md` / `MEMORY.md` 使用。
 
+## Requirements
+
+使用前建议至少确认：
+
+- 你已有论文仓库，或准备新建一个论文仓库
+- 你知道自己要接入的是 `Cursor`、`Codex`、`Claude Code` 中的哪一种或哪几种
+- 若使用 `latex-template/`，本地最好具备可用的 TeX 发行版，并按 `LuaLaTeX + BibTeX` 链路编译
+
+完整要求见 `docs/requirements.md`。
+
 ## 开箱即用资源
 
 - `prompts/recommended-prompts.md`
@@ -115,8 +137,10 @@ tju-thesis-review-kit/
   - 导师汇报版输出模板，适合整理“已改什么、还差什么、风险在哪”
 - `latex-template/README.md`
   - LaTeX starter 模板说明
-- `SOCIAL_POSTS.md`
+- `docs/release/social-posts.md`
   - 朋友圈 / 小红书 / 即刻 / X / GitHub 动态可直接复制的发布文案
+- `docs/requirements.md`
+  - 使用本仓库前建议具备的工具、环境和接入要求
 
 ## 清洗说明
 
@@ -125,16 +149,16 @@ tju-thesis-review-kit/
 - 把动态经验拆成通用 `Skill`、常驻 `Rule` 和仓库级模板
 - 对 LaTeX 模板做了去私有化处理，使其更适合公开分发
 
-更详细的映射说明见 `CLEANUP_NOTES.md`。
+更详细的映射说明见 `docs/cleanup-notes.md`。
 
 ## 发布到 GitHub 前
 
 建议至少确认：
 
-- `OPEN_SOURCE_CHECKLIST.md`
+- `docs/open-source-checklist.md`
 - `THIRD_PARTY.md`
-- `GITHUB_COPY.md`
-- `GITHUB_RELEASE_DRAFT.md`
+- `docs/release/github-copy.md`
+- `docs/release/github-release-draft.md`
 
 这样你不仅能发代码，也能直接发简介、release 文案和使用说明。
 
