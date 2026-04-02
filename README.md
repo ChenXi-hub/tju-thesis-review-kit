@@ -1,13 +1,19 @@
 # TJU Thesis Review Kit
 
-面向天津大学本科毕业设计（论文）的开源辅助套件，包含：
+为天津大学本科毕业设计（论文）准备的一套更实用的开源辅助工具：把零散的毕设经验整理成可复用的 Cursor `Skill`、`Rule`、Prompt 和 `LaTeX` starter，帮助同学们更高效地完成论文自查、格式整改和送审前 review。
+
+An open-source toolkit for Tianjin University undergraduate theses, including reusable Cursor skills, rules, prompts, and a LaTeX starter template for review, revision, and pre-submission checks.
+
+适合“已经在写论文，但总觉得格式、图表、摘要、参考文献容易出问题”的场景，也适合想把 AI 从“零散问答”升级成“长期协作助手”的同学。
+
+This repository is designed for students who want more than one-off AI answers and prefer a reusable workflow for thesis writing and review.
+
+## What Is Included
 
 - Cursor `Skill` 与 `Rule`
 - 可直接起步的 `LaTeX` starter 模板
 - `PROJECT.md` / `MEMORY.md` 模板
 - 可直接复制使用的提问模板、送审前总检 prompt、导师汇报版输出模板
-
-它的目标不是替代导师和学院要求，而是帮助同学们更系统地完成论文自查、格式整改和送审前 review。
 
 ## 适合谁用
 
@@ -39,7 +45,8 @@ tju-thesis-review-kit/
 ├── CONTRIBUTING.md
 ├── GITHUB_COPY.md
 ├── GITHUB_RELEASE_DRAFT.md
-└── OPEN_SOURCE_CHECKLIST.md
+├── OPEN_SOURCE_CHECKLIST.md
+└── SOCIAL_POSTS.md
 ```
 
 ## 快速开始
@@ -78,6 +85,8 @@ tju-thesis-review-kit/
   - 导师汇报版输出模板，适合整理“已改什么、还差什么、风险在哪”
 - `latex-template/README.md`
   - LaTeX starter 模板说明
+- `SOCIAL_POSTS.md`
+  - 朋友圈 / 小红书 / 即刻 / X / GitHub 动态可直接复制的发布文案
 
 ## 清洗说明
 
