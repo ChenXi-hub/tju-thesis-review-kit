@@ -1,5 +1,7 @@
 # TJU Thesis Review Checklist
 
+另见同目录 `supervisor-requirements.md`（导师逐条格式与内容口径，可与本清单交叉核对）。
+
 ## 1. 前置页与页码
 
 - 封面、扉页、独创性声明、中英文摘要、目录、正文、参考文献、附录、致谢顺序是否完整。

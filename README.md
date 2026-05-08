@@ -129,6 +129,8 @@ tju-thesis-review-kit/
 
 ## 开箱即用资源
 
+- `.cursor/skills/tju-thesis-reviewer/supervisor-requirements.md`（及 Codex `references/`、Claude 技能目录下同名文件）
+  - 导师常见「格式 + 内容」逐条清单，与技能主文件 `SKILL.md` 中的硬清单对照使用
 - `prompts/recommended-prompts.md`
   - 常用提问模板，适合日常 review、图表整改、参考文献核对、摘要检查
 - `prompts/pre-submission-review-prompt.md`
